@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/UserContext';
 
 const Header = () => {
+    const {user}= useContext(AuthContext)
+    console.log(user)
     return (
         <div>
             <div className="navbar bg-primary text-primary-content">
